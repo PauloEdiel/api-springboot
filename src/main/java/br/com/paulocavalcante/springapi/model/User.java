@@ -10,7 +10,7 @@ import java.util.Objects;
 
 @Entity
 @Table(name = "app_user")
-public class User implements Serializable{
+public class User implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
@@ -23,6 +23,16 @@ public class User implements Serializable{
     private String senha;
 
     private String email;
+
+    public User() {
+    }
+
+    public User(Long id, String login, String senha, String email) {
+        this.id = id;
+        this.login = login;
+        this.senha = senha;
+        this.email = email;
+    }
 
     public Long getId() {
         return id;
